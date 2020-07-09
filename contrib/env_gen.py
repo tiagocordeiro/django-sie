@@ -14,7 +14,7 @@ DEBUG=True
 ALLOWED_HOSTS=localhost, 127.0.0.1
 DATABASE_URL=sqlite:///db.sqlite3
 # Se usar docker...
-# DATABASE_URL=postgres://djmenu:djmenu@localhost/postgres
+# DATABASE_URL=postgres://sie:sie@localhost/postgres
 
 # Email Configuration
 EMAIL_BACKEND=django.core.mail.backends.console.EmailBackend
