@@ -130,3 +130,7 @@ dmypy.json
 
 # local postgres data files
 .pgdata
+
+# Django dev static and media files
+/staticfiles/
+/mediafiles/
