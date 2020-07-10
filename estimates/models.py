@@ -14,7 +14,8 @@ class Estimate(Active, TimeStampedModel):
         ('revised', 'Revised'),
     )
 
-    client = models.ForeignKey(Client, blank=True, on_delete=models.CASCADE)
+    client = models.ForeignKey(Client, blank=True, null=True,
+                               on_delete=models.CASCADE)
     status = models.CharField(max_length=10, default='open')
     validate = models.DateField()
 
