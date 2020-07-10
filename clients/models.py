@@ -1,7 +1,9 @@
 from django.db import models
 
+from core.models import TimeStampedModel, Active
 
-class Client(models.Model):
+
+class Client(Active, TimeStampedModel):
     TYPE_CHOICES = (
         ('company', "Company"),
         ('individual', "Individual"),
@@ -10,7 +12,7 @@ class Client(models.Model):
     type = models.CharField(choices=TYPE_CHOICES, max_length=20)
 
 
-class Contact(models.Model):
+class Contact(Active, TimeStampedModel):
     client = models.ForeignKey(Client, on_delete=models.CASCADE)
     name = models.CharField(max_length=50)
     email = models.EmailField(unique=True, blank=True)
