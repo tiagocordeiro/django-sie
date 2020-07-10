@@ -15,4 +15,9 @@ class ClientAdmin(admin.ModelAdmin):
     ]
 
 
+class ContactAdmin(admin.ModelAdmin):
+    list_display = ('name', 'email', 'phone', 'mobile', 'client')
+
+
 admin.site.register(Client, ClientAdmin)
+admin.site.register(Contact, ContactAdmin)
